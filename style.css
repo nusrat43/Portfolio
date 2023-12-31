@@ -1,29 +1,123 @@
+*{
+    /* padding: 0;
+    margin: 0; */
+    box-sizing: border-box;
+}
+
 body{
     background-color: #1c1d1e;
 }
 html{
     scroll-behavior: smooth;
 }
-.nav{
-    text-align: end; 
-    word-spacing: 20px; 
-    margin-top: 50px;
-    margin-right: 40px;
+nav{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:#1c1d1e;
+    box-shadow: 0 14px 28px rgba(0 , 0, 0, 0.80), 0 10px 10px rgba(0 , 0, 0, 0.80);
+    z-index: 99;
+    /* border-bottom: 1px solid transparent; */
+
 }
-a{
+.content_nav{
+    max-width:800px;
+    margin: auto;
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .logo a{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    transition: 0.3s;
+    /* text-align: left; */
+  
+}
+nav .logo a:hover{
+    color: teal;
+}
+nav .checkbox{
+    display: none;
+}
+nav input{
+    display: none;
+}
+nav .checkbox i{
+    font-size: 2rem;
+    color: teal;
+    cursor: pointer;
+   
+}
+ul{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    transition: left 0.3s;
+}
+ul li a{
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
     text-decoration: none;
+    font-weight: 600;
+    color:white;
+    transition: 0.3s;
+}
+ul li a:hover{
+    border-top-color: teal;
+    border-bottom-color: teal;
+    color: teal;
+    
+}
+@media (width < 750px){
+    nav .checkbox{
+        display: block;
+    }
+    ul{
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 85px);
+        left: -100%;
+        top:85px;
+        background-color: #1c1d1e;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    nav #check:checked ~ ul{
+        left: 0;
+    }
+    ul li a{
+        font-size: 1.25rem;
+    }
+}
+
+
+/* .nav a{
+    text-decoration: none;
+    border: 2px solid transparent;
     color:black;
     font-weight: 800;
     color: white;
+    padding: 10px;
 }
-a:hover{
+.nav a:hover{
     color:teal;
-}
+    border-top-color:teal ;
+    border-bottom-color: teal;
+} */
 #propic{
-    padding: 40px;
-    width: 450px;
+   flex-basis: 500px;
+    height: 560px;
+    padding: 2rem;
     box-shadow: 0 14px 28px rgba(0 , 0, 0, 0.80), 0 10px 10px rgba(0 , 0, 0, 0.80);
-    border-radius: 25px;
+    border-radius: 1.5rem;
     background-color: #1c1d1e;
     /* float: right; */
 
@@ -36,19 +130,20 @@ img{
 
     height: 500px;
     width: 100%;
-    border-radius: 17px;
+    border-radius: 1.5rem;
 }
 #propic:hover{
     box-shadow: 4px 4px 15px teal;
     transition: 0.5s;
 }
 .nameD{
-    height: 300px;
-    width: 700px;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
+    flex-basis: 600px;
+    /* height: 20rem;
+    width: 42rem; */
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
     box-shadow: 0 14px 28px rgba(0 , 0, 0, 0.80), 0 10px 10px rgba(0 , 0, 0, 0.80);
-    margin-left: 60px;
+    margin-left: 4rem;
     background-color: #1c1d1e;
     
 
@@ -65,22 +160,23 @@ img{
 }
 
 .Under_name{
-    padding: 30px;
+    padding: 1rem;
     background-color: #1c1d1e;
     color: white;
     border-radius: 15px;
 }
 .D_CV{
-    height: 200px;
-    width: 700px;
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
+    flex-basis: 600px;
+    /* height: 16rem;
+    width: 42rem; */
+    border-bottom-right-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
     box-shadow: 0 14px 28px rgba(0 , 0, 0, 0.80), 0 10px 10px rgba(0 , 0, 0, 0.80);
     color: white;
-    margin-top: 37px;
-    margin-left:60px ;
+    margin-top: 3rem;
+    margin-left:4rem ;
     text-align: center;
-    padding-top: 50px;
+    padding-top:3rem;
     background-color: #1c1d1e;
    
 }
@@ -91,13 +187,14 @@ img{
 
 .container{
     display: flex;
-    margin: 120px;
+    margin: 8rem;
+    margin-bottom: 5rem;
 }
 button{
     color: white;
   padding: 1rem 2em 1em 2em;
-  border-radius: 5px;
-  margin: 20px;
+  border-radius: 0.3rem;
+  margin: 3rem;
   background-color: #1c1d1e;
   box-shadow: 0 14px 28px rgba(0 , 0, 0, 0.80), 0 10px 10px rgba(0 , 0, 0, 0.80);
  
@@ -108,13 +205,11 @@ button:hover{
     
 }
 .new_line{
-    height: 10px;
+    height: 0.5rem;
     width: 90%;
     float: left;
-   
-    
     background: linear-gradient(135deg, rgb(4, 211, 166)0%, rgb(9, 112, 86)100%);
-    border-radius: 5px;
+    border-radius: 1rem;
     margin: 30px 50px 50px 50px;
 
    
@@ -122,17 +217,17 @@ button:hover{
 h1{
     color: white;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 3rem;
 }
 .Contact{
-    width: 450px;
-    height: 350px;
+    width: 30rem;
+    height: 30rem;
     color: white;
     box-shadow: 0 14px 28px rgba(0 , 0, 0, 0.80), 0 10px 10px rgba(0 , 0, 0, 0.80);
-    margin-left: 50px;
-    margin-top: 90px;
-    padding: 30px;
-    border-radius: 15px;
+    margin-left: 6rem;
+    margin-top: 2rem;
+    padding: 3rem;
+    border-radius: 1.5rem;
     background-color: #1c1d1e;
     
 
@@ -143,13 +238,13 @@ h1{
 }
 
 .info{
-    height: 500px;
-    width: 550px;
+    height: 40rem;
+    width: 40rem;
     color: white;
     box-shadow: 0 14px 28px rgba(0 , 0, 0, 0.80), 0 10px 10px rgba(0 , 0, 0, 0.80);
-    margin-left: 200px;
-    padding: 35px;
-    border-radius: 15px;
+    margin-left: 6rem;
+    padding: 4rem;
+    border-radius: 1.5rem;
     background-color: #1c1d1e;
 }
 .info:hover{
@@ -158,30 +253,31 @@ h1{
 }
 #about1{
     display: flex;
-    margin: 40px;
+    margin: 3rem;
 }
 .Outer_resume{
+
     display: flex;
     color: white;
-    margin-top: 50px ;
-    margin-left: 150px;
-    margin-right: 150px;
-    border-radius: 10px;
+    margin-top: 4rem ;
+    margin-left: 8rem;
+    margin-right: 8rem;
+    border-radius: 1.5rem;
     box-shadow: 0 14px 28px rgba(0 , 0, 0, 0.80), 0 10px 10px rgba(0 , 0, 0, 0.80);
 
 }
 .resume1{
-    height: 70px;
-    width: 300px;
+    height: 6rem;
+    width: 25rem;
     text-align: center;
-    font-size:30px;
+    font-size:2rem;
     /* padding: 5px 20px 5px 20px; */
-    padding-top:35px;
-    border-radius: 10px;
+    padding-top:1.5rem;
+    border-radius: 1rem;
     background-color: #1c1d1e;
 }
 .resume1:hover{
-    border-radius: 10px;
+    border-radius: 1rem;
     /* box-shadow: 0 14px 28px rgba(0 , 0, 0, 0.80), 0 10px 10px rgba(0 , 0, 0, 0.80); */
     box-shadow: 4px 4px 15px teal;
     color: red;
@@ -189,33 +285,33 @@ h1{
 }
 .H_E{
     text-align: left;
-    margin-left: 150px;
+    margin-left: 12rem;
 }
  .outer_stick{
     display: flex;
     justify-content: flex-start;
 } 
 .stick{
-    height: 270px;
-    width: 4px;
+    height: 16rem;
+    width: 0.4rem;
     background-color:rgb(21, 21, 21);
     margin: 50px 0px 0px 100px ;
 
 }
 .stick_h1{
-    height: 4px;
-    width: 70px;
+    height:0.4rem;
+    width:5rem;
     background-color:rgb(21, 21, 21);
     margin: 100px 0px 0px 0px;   
 }
 .Edu{
-    width: 500px;
-    height: 200px;
+    width: 30rem;
+    height: 15rem;
     border-radius: 10px;
     box-shadow: 0 14px 28px rgba(0 , 0, 0, 0.80), 0 10px 10px rgba(0 , 0, 0, 0.80);
     margin: 55px 0px 0px 0px;
     color: white;
-    padding-top: 60px;
+    padding-top: 3rem;
     text-align: center;
     background-color: #1c1d1e;
 }
@@ -224,25 +320,25 @@ h1{
     color: teal;
 }
 .stick1{
-    height: 290px;
-    width: 4px;
+    height: 18rem;
+    width: 0.4rem;
     background-color:rgb(21, 21, 21);
     margin: 0px 0px 0px 100px ;
 }
 .stick_h2{
-    height: 4px;
-    width: 70px;
+    height: 0.4rem;
+    width: 5rem;
     background-color:rgb(21, 21, 21);
     margin: 80px 0px 0px 0px;   
 }
 .Edu1{
-    width: 500px;
-    height: 200px;
+    width: 30rem;
+    height: 15rem;
     border-radius: 10px;
     box-shadow: 0 14px 28px rgba(0 , 0, 0, 0.80), 0 10px 10px rgba(0 , 0, 0, 0.80);
     margin: 30px 0px 0px 0px;
     color: white;
-    padding-top: 60px;
+    padding-top: 3rem;
     text-align: center;
     background-color: #1c1d1e;
 
@@ -255,8 +351,8 @@ h1{
     display: flex;   
 }
 .Out_intern{
-    margin-left: 20px;
-    margin-bottom: 70px;
+    margin-left: 4rem;
+    margin-bottom: 5rem;
 }
 
 
@@ -264,10 +360,10 @@ h1{
     display: flex;
 }
 .res{
-    width: 350px;
-    height: 400px; 
-    margin: 60px 0px 50px 110px;
-    border-radius: 15px;
+    width: 22rem;
+    height: 25rem; 
+    margin: 4rem 0px 4rem 7rem;
+    border-radius: 1.5rem;
     box-shadow: 0 14px 28px rgba(0 , 0, 0, 0.80), 0 10px 10px rgba(0 , 0, 0, 0.80); 
     color: white;
     text-align: center;
@@ -279,17 +375,18 @@ h1{
     color: teal;
 }
 .pro_img{
-    width: 310px;
-    height: 200px;
-    padding: 20px;
+    width: 22rem;
+    height: 15rem;
+    padding: 2rem;
+   
 }
 .outer_contact{
-    width: 600px;
-    height: 850px;
+    width: 45rem;
+    height: 60rem;
     border-radius: 15px;
     box-shadow: 0 14px 28px rgba(0 , 0, 0, 0.80), 0 10px 10px rgba(0 , 0, 0, 0.80); 
     margin:  50px 250px 50px 400px ;
-    padding:30px  50px 10px 30px ;
+    padding: 3rem  3rem 2rem 3rem ;
     background-color: #1c1d1e;
 }
 .outer_contact:hover{
@@ -313,10 +410,10 @@ textarea:hover{
 
 .det{
     background-color: rgb(23, 21, 21);
-    border-radius:5px;
-    border: 2px solid black;
+    border-radius: 0.2rem;
+    border: 0.1rem solid black;
     box-shadow: 4px 8px -18px black;
-    padding: 10px ;
+    padding: 1.5rem ;
 }
 .det:hover{
     border: 2px solid teal;
@@ -342,13 +439,13 @@ textarea:hover{
     width: 96%;
 }
 .send_msg{
-    height: 50px;
-    width: 100%;
+    height: 3rem;
+    width: 97%;
     color:red;
-    font-size: 20px;
+    font-size: 1.2rem;
     padding:0px;
-    border-radius: 5px;
-    margin-top: 20px;
+    border-radius: 0.2rem;
+    margin-top: 2rem;
     margin-left: 0px;
     background-color: #1c1d1e;
     box-shadow: 0 14px 28px rgba(0 , 0, 0, 0.80), 0 10px 10px rgba(0 , 0, 0, 0.80);
@@ -357,16 +454,16 @@ textarea:hover{
 }
 
 .skill{
-    width: 1000px;
-    height: 550px;
+    width: 60rem;
+    height: 35rem;
     list-style: none;
     color: white;
     text-transform: uppercase;
-    border-radius: 15px;
+    border-radius: 1.5rem;
     /* box-shadow: 4px 4px 8px rgb(72, 71, 71); */
     box-shadow: 0 14px 28px rgba(0 , 0, 0, 0.80), 0 10px 10px rgba(0 , 0, 0, 0.80);
-    margin: 60px 0px 70px 220px;
-    padding: 20px 0px 0px 50px;
+    margin: 5rem 0px 5rem 15rem;
+    padding: 1rem 0px 0px 2rem;
     background-color: #1c1d1e;
 }
 .skill:hover{
@@ -380,9 +477,9 @@ textarea:hover{
 .bar{
     background-color: #353b48;
     display: block;
-    height: 10px;
+    height: 0.8rem;
     border: 1px solid rgba(0,0,0,0.3);
-    border-radius: 10px;
+    border-radius: 0.8rem;
     overflow: hidden;
     box-shadow: 0 1px 3px rgba(0 , 0, 0, 0.12), 0 1px 2px rgba(0 , 0, 0, 0.24);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
@@ -391,14 +488,14 @@ textarea:hover{
     box-shadow: 0 14px 28px rgba(0 , 0, 0, 0.25), 0 10px 10px rgba(0 , 0, 0, 0.22);
 }
 .bar span{
-    height: 10px;
+    height: 0.8rem;
     float: left;
     background: linear-gradient(135deg, rgba(236,0,140,1)0%, rgb(207, 27, 27)100%);
-    border-radius: 8px;
+    border-radius: 0.6rem;
 
 }
 .html{
-    width: 100%;
+    width: 95%;
     animation: 1s;
 }
 .css{
@@ -423,7 +520,18 @@ textarea:hover{
     text-align: center;
     display: flex;
     justify-content:space-evenly;
-    margin-top: 20px;
+    margin-top: 1rem;
+}
+.icon1:hover{
+    color: teal;
+}
+a{
+    text-decoration: none;
+    border: 2px solid transparent;
+    color:black;
+    font-weight: 800;
+    color: white;
+    padding: 10px;
 }
 
 .arrow a{
