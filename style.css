@@ -2,6 +2,7 @@
     /* padding: 0;
     margin: 0; */
     box-sizing: border-box;
+    /* max-width: 1874px; */
 }
 
 body{
@@ -22,7 +23,7 @@ nav{
 
 }
 .content_nav{
-    max-width:800px;
+    max-width:500px;
     margin: auto;
     padding: 1.5rem 1rem;
     display: flex;
@@ -34,7 +35,7 @@ nav .logo a{
     font-weight: 600;
     color: white;
     transition: 0.3s;
-    /* text-align: left; */
+  
   
 }
 nav .logo a:hover{
@@ -74,29 +75,7 @@ ul li a:hover{
     color: teal;
     
 }
-@media (width < 750px){
-    nav .checkbox{
-        display: block;
-    }
-    ul{
-        position: absolute;
-        width: 100%;
-        height: calc(100vh - 85px);
-        left: -100%;
-        top:85px;
-        background-color: #1c1d1e;
-        flex-direction: column;
-        justify-content: center;
-        gap: 3rem;
-    }
 
-    nav #check:checked ~ ul{
-        left: 0;
-    }
-    ul li a{
-        font-size: 1.25rem;
-    }
-}
 
 
 /* .nav a{
@@ -113,7 +92,8 @@ ul li a:hover{
     border-bottom-color: teal;
 } */
 #propic{
-   flex-basis: 500px;
+  min-width: 500px;
+  
     height: 560px;
     padding: 2rem;
     box-shadow: 0 14px 28px rgba(0 , 0, 0, 0.80), 0 10px 10px rgba(0 , 0, 0, 0.80);
@@ -138,6 +118,7 @@ img{
 }
 .nameD{
     flex-basis: 600px;
+    height: 300px;
     /* height: 20rem;
     width: 42rem; */
     border-top-right-radius: 1rem;
@@ -166,14 +147,14 @@ img{
     border-radius: 15px;
 }
 .D_CV{
-    flex-basis: 600px;
-    /* height: 16rem;
-    width: 42rem; */
+   
+    height: 230px;
+    min-width: 500px;
     border-bottom-right-radius: 1.5rem;
     border-bottom-left-radius: 1.5rem;
     box-shadow: 0 14px 28px rgba(0 , 0, 0, 0.80), 0 10px 10px rgba(0 , 0, 0, 0.80);
     color: white;
-    margin-top: 3rem;
+    margin-top: 2rem;
     margin-left:4rem ;
     text-align: center;
     padding-top:3rem;
@@ -190,11 +171,16 @@ img{
     margin: 8rem;
     margin-bottom: 5rem;
 }
+.btn{
+    display: flex;
+    justify-content: center;
+}
 button{
     color: white;
   padding: 1rem 2em 1em 2em;
   border-radius: 0.3rem;
-  margin: 3rem;
+  margin: 0px 2rem;
+ 
   background-color: #1c1d1e;
   box-shadow: 0 14px 28px rgba(0 , 0, 0, 0.80), 0 10px 10px rgba(0 , 0, 0, 0.80);
  
@@ -220,8 +206,8 @@ h1{
     margin-top: 3rem;
 }
 .Contact{
-    width: 30rem;
-    height: 30rem;
+    width:500px;
+   min-width: 500px;
     color: white;
     box-shadow: 0 14px 28px rgba(0 , 0, 0, 0.80), 0 10px 10px rgba(0 , 0, 0, 0.80);
     margin-left: 6rem;
@@ -238,12 +224,13 @@ h1{
 }
 
 .info{
-    height: 40rem;
-    width: 40rem;
+    width: 600px;
+    min-width: 500px;
     color: white;
     box-shadow: 0 14px 28px rgba(0 , 0, 0, 0.80), 0 10px 10px rgba(0 , 0, 0, 0.80);
     margin-left: 6rem;
-    padding: 4rem;
+    margin-top: 2rem;
+    padding: 3rem;
     border-radius: 1.5rem;
     background-color: #1c1d1e;
 }
@@ -256,19 +243,19 @@ h1{
     margin: 3rem;
 }
 .Outer_resume{
-
+    width: 90%;
     display: flex;
     color: white;
-    margin-top: 4rem ;
-    margin-left: 8rem;
-    margin-right: 8rem;
+    margin-top:60px ;
+    margin-left: 70px;
+    /* margin-right: 8rem; */
     border-radius: 1.5rem;
     box-shadow: 0 14px 28px rgba(0 , 0, 0, 0.80), 0 10px 10px rgba(0 , 0, 0, 0.80);
 
 }
 .resume1{
-    height: 6rem;
-    width: 25rem;
+    height: 100px;
+    width: 400px;
     text-align: center;
     font-size:2rem;
     /* padding: 5px 20px 5px 20px; */
@@ -309,7 +296,7 @@ h1{
     height: 15rem;
     border-radius: 10px;
     box-shadow: 0 14px 28px rgba(0 , 0, 0, 0.80), 0 10px 10px rgba(0 , 0, 0, 0.80);
-    margin: 55px 0px 0px 0px;
+    margin: 55px 60px 0px 0px;
     color: white;
     padding-top: 3rem;
     text-align: center;
@@ -351,15 +338,15 @@ h1{
     display: flex;   
 }
 .Out_intern{
-    margin-left: 4rem;
+    margin-left: 1rem;
     margin-bottom: 5rem;
 }
 
 
-.resu{
+.nussu{
     display: flex;
 }
-.res{
+.nus{
     width: 22rem;
     height: 25rem; 
     margin: 4rem 0px 4rem 7rem;
@@ -370,7 +357,7 @@ h1{
     background-color: #1c1d1e;
     
 }
-.res:hover{
+.nus:hover{
     box-shadow: 4px 4px 15px teal;
     color: teal;
 }
@@ -542,3 +529,95 @@ a{
     text-decoration: none;
     color: rgb(232, 224, 224);
 }
+
+@media (width<600px){
+    nav .checkbox{
+        display: block;
+    }
+    ul{
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 85px);
+        left: -100%;
+        top:85px;
+        background-color: #1c1d1e;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    nav #check:checked ~ ul{
+        left: 0;
+    }
+    ul li a{
+        font-size: 1.25rem;
+    }
+    .container{
+        flex-wrap: wrap;
+        margin: 6rem 0px 40px 3rem;
+    }  
+    .nameD{
+        margin-left: 0rem;
+    }
+    .D_CV{
+        margin-left: 0rem;
+    }
+    #about1{
+        flex-wrap: wrap;
+        /* margin: 40px 0px 40px 1rem; */
+        margin-left: 0rem;
+    }
+    #about{
+        margin-left: -3rem;
+    }
+    .Contact{
+        width: 600px;
+    }
+    .info{
+        width: 400px;
+    }
+    #resume{
+        margin-left: -3rem;
+        /* margin-right: 10px; */
+    }
+    .Outer_resume{
+        width:550px;
+    
+    }
+    .Edu{
+        width: 450px;
+    }
+    .Edu1{
+        width: 450px;
+    }
+    #education{
+        margin-left: -3rem;
+    }
+    #internship{
+        margin-left: -4rem;
+    }
+    .content{
+        margin: 2rem 0px 40px 0px;
+    }
+    .outer_content{
+        flex-wrap: wrap;
+        margin: 40px 1rem 40px 1rem;
+    }
+    .skill{
+        width: 500px;
+        align-content: start;
+        margin: 40px 1rem 40px 3rem;
+        }
+    .nussu{
+       
+        flex-wrap: wrap;
+        margin: 40px 0px 40px -3rem;
+    }
+    .outer_contact{
+        width: 520px;
+       
+        align-content: start;
+        margin: 40px 1rem 40px 1rem;
+       
+    }
+}   
