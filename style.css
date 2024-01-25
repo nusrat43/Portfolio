@@ -442,7 +442,7 @@ textarea:hover{
 
 .skill{
     width: 60rem;
-    height: 35rem;
+    height: 38rem;
     list-style: none;
     color: white;
     text-transform: uppercase;
@@ -458,7 +458,7 @@ textarea:hover{
 
 }
 .skill li{
-    margin: 20px 40px 0px 0px;
+    margin: 10px 40px 0px 0px;
     padding: 5px;
 }
 .bar{
@@ -530,7 +530,7 @@ a{
     color: rgb(232, 224, 224);
 }
 
-@media (width<600px){
+@media (width<500px){
     nav .checkbox{
         display: block;
     }
