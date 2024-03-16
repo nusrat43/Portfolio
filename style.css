@@ -1,4 +1,4 @@
-*{
+ *{
     /* padding: 0;
     margin: 0; */
     box-sizing: border-box;
@@ -23,25 +23,32 @@ nav{
 
 }
 .content_nav{
-    max-width:500px;
-    margin: auto;
+    /* max-width:100rem; */
+    margin: 0 2rem auto;
     padding: 1.5rem 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 nav .logo a{
-    font-size: 1.5rem;
+    /* font-size: 1.5rem;
     font-weight: 600;
     color: white;
     transition: 0.3s;
-  
-  
+    font-family: 'Mea Culpa', cursive; */
+
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: white;
+    transition: 0.3s;
+    font-family: 'Mea Culpa', cursive;
+    padding: 0;
+ 
 }
 nav .logo a:hover{
     color: teal;
 }
-nav .checkbox{
+/* nav .checkbox{
     display: none;
 }
 nav input{
@@ -52,6 +59,12 @@ nav .checkbox i{
     color: teal;
     cursor: pointer;
    
+} */
+.menu-btn{
+    color: white;
+    font-size: 50px;
+    margin-left: 300px;
+    display: none;
 }
 ul{
     display: flex;
@@ -166,7 +179,7 @@ img{
     transition: 0.5s;
 }
 
-.container{
+.container1{
     display: flex;
     margin: 8rem;
     margin-bottom: 5rem;
@@ -336,13 +349,15 @@ h1{
 }
 .outer_content{
     display: flex;   
+    /* margin-left: 10px; */
 }
 .Out_intern{
-    margin-left: 1rem;
+    margin-left: 3rem;
     margin-bottom: 5rem;
 }
-
-
+/* #internship{
+    margin-left: 20px;
+} */
 .nussu{
     display: flex;
 }
@@ -361,10 +376,17 @@ h1{
     box-shadow: 4px 4px 15px teal;
     color: teal;
 }
+
 .pro_img{
     width: 22rem;
-    height: 15rem;
+    height: 17rem;
     padding: 2rem;
+   
+}
+.nus img:hover{
+    width: 22.5rem;
+    height: 18rem;
+    /* transition: .5s; */
    
 }
 .outer_contact{
@@ -386,6 +408,9 @@ input{
     color: white;
     font-weight:bold ; 
 }
+.outer_contact input:focus{
+    border: 2px solid red;
+}
 textarea{
     color: white;
     font-weight:bold ;
@@ -394,6 +419,9 @@ textarea{
 textarea:hover{
     border: teal 2px solid; 
 }
+/* textarea:focus{
+    border: 1px solid red;
+} */
 
 .det{
     background-color: rgb(23, 21, 21);
@@ -405,6 +433,7 @@ textarea:hover{
 .det:hover{
     border: 2px solid teal;
 }
+
 #name{
     height: 20px;
     width: 96%;
@@ -442,14 +471,14 @@ textarea:hover{
 
 .skill{
     width: 60rem;
-    height: 38rem;
+    height: 42rem;
     list-style: none;
     color: white;
     text-transform: uppercase;
     border-radius: 1.5rem;
     /* box-shadow: 4px 4px 8px rgb(72, 71, 71); */
     box-shadow: 0 14px 28px rgba(0 , 0, 0, 0.80), 0 10px 10px rgba(0 , 0, 0, 0.80);
-    margin: 5rem 0px 5rem 15rem;
+    margin: 5rem 0px 5rem 17rem;
     padding: 1rem 0px 0px 2rem;
     background-color: #1c1d1e;
 }
@@ -459,7 +488,7 @@ textarea:hover{
 }
 .skill li{
     margin: 10px 40px 0px 0px;
-    padding: 5px;
+    padding: 2px;
 }
 .bar{
     background-color: #353b48;
@@ -531,7 +560,7 @@ a{
 }
 
 @media (width<500px){
-    nav .checkbox{
+    nav .menu-btn{
         display: block;
     }
     ul{
@@ -553,7 +582,7 @@ a{
     ul li a{
         font-size: 1.25rem;
     }
-    .container{
+    .container1{
         flex-wrap: wrap;
         margin: 6rem 0px 40px 3rem;
     }  
@@ -609,16 +638,32 @@ a{
         align-content: start;
         margin: 40px 1rem 40px 3rem;
         }
-    .nussu{
-       
-        flex-wrap: wrap;
-        margin: 40px 0px 40px -3rem;
+    /* .nussu{     
+        /* flex-wrap: wrap;  */
+        /* margin: 5px 0px 0px -3rem; 
+    } */
+    .nus{
+        width: 200px;
+        height: 250px;
+        margin: 50px 10px 10px 0;
+    }
+    .nus img{
+        width: 200px;
+        height: 180px;
+    }
+    .nus img:hover{
+        width: 210px;
+        height: 190px;
     }
     .outer_contact{
         width: 520px;
-       
         align-content: start;
         margin: 40px 1rem 40px 1rem;
        
     }
+    .new_line{
+        width: 500px;
+    }
+    
+
 }   
